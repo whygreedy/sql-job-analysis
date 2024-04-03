@@ -15,9 +15,36 @@ FROM job_postings_fact
 INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
-    job_title_short = 'Data Analyst' AND
-    job_work_from_home = TRUE
+    job_title_short = 'Data Analyst'
 GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 5;
 
+/*
+
+The top 5 skills with the highest demand for data analysts encompass a mix of technical and analytical capabilities, including proficiency in querying languages (SQL), data manipulation tools (Excel), programming languages (Python), and data visualization platforms (Tableau, Power BI).
+
+[
+  {
+    "skills": "sql",
+    "demand_count": "92628"
+  },
+  {
+    "skills": "excel",
+    "demand_count": "67031"
+  },
+  {
+    "skills": "python",
+    "demand_count": "57326"
+  },
+  {
+    "skills": "tableau",
+    "demand_count": "46554"
+  },
+  {
+    "skills": "power bi",
+    "demand_count": "39468"
+  }
+]
+
+*/
