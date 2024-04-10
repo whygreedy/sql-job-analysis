@@ -37,10 +37,36 @@ To delve into the data analyst job market, I leveraged the power of several key 
 
 ## Highlights
 
-![7_salary_stat_all]()
-![7_top_demanded_skill_salary]()
-![7_top_paying_skill_salary]()
-![5_optimal_skills]()
+Before diving into step by step analysis, here are data graphs with insight to quickly know better of data analyst job market.
+
+**1. Salary Stat Overview**
+
+> Annual salary stat of all Data Analyst Jobs:\
+> <sub>
+> Q1 Salary: **75,000**\
+> Median Salary: **92,500**\
+> Q3 Salary: **111,478**\
+> Mean Salary: **96,707**\
+> Max Salary: **400,000**\
+> Min Salary: **30,000**</sub>
+
+- Data Analyst roles typically provide competitive salaries that can support a comfortable standard of living in the US. Besides, the 75% of jobs offer annual salary above $75,000 which is beyond U.S. median annual income $59,540 in 2023 Q4.
+
+![7_salary_stat_all](datagraph/7_salary_stat_all.png)
+
+**2. Salary Stat of Top 5 demanded skills**
+
+- The median salary (represented by the horizontal line inside each box) varies across top demanded skills, and Python appears to have the highest median salary, followed by Tableau and R.
+- As a junior data analyst job seeker, being proficient in Python and Tableau could enhance your job prospects and potentially lead to better salary opportunities.
+
+![7_top_demanded_skill_salary](datagraph/7_top_demanded_skill_salary.png)
+
+**3. Salary Stat of Top 5 paying skills**
+
+- Big data, distributed data management and machine learning are skills to drive high-paying jobs.
+- Kafka and PyTorch have higher Q3 and mean salary among top 5 paying skills despite their median value not being the highest. Job seekers with proficiency in these skills may have access to a subset of high-paying jobs that offer competitive salaries above the median and mean of the entire job listings.
+
+![7_top_paying_skill_salary](datagraph/7_top_paying_skill_salary.png)
 
 ## Detailed Analysis Step By Step
 
