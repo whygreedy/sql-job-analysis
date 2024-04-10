@@ -1,7 +1,9 @@
 # Introduction
 
-Explore data from job market, and focusing on data analyst roles.\
-As a job seeker 👩‍💻 in the realm of data analysis, you may be curious about the skills that are in high demand 📈 and come with attractive salaries 💰.\
+Explore data from job market, and focusing on data analyst roles.
+
+As a job seeker 👩‍💻 in the realm of data analysis, you may be curious about the skills that are in high demand 📈 and come with attractive salaries 💰.
+
 Additionally, you might be interested in learning about the skills that can elevate your skillset and pave the way for pursuing higher-paying roles in the field of data analytics.
 
 🔍 Check out SQL queries here : [sql_query folder](/sql_query/)
@@ -12,7 +14,7 @@ To refine my SQL skill, data storytelling skill and prepare for job hunting in d
 
 Data hails from Luke Barousse's [SQL Course](https://lukebarousse.com/sql). It's packed with insights on job titles, salaries, locations, and essential skills.
 
-### The questions I wanted to answer through my SQL queries were:
+> The questions I wanted to answer through my SQL queries were:
 
 1. What are the top-paying data analyst jobs?
 2. What skills are required for these top-paying jobs?
@@ -27,48 +29,81 @@ To delve into the data analyst job market, I leveraged the power of several key 
 
 - **SQL:** The backbone of my analysis, allowing me to query the database and unearth critical insights.
 - **PostgreSQL:** The chosen database management system, ideal for handling the job posting data.
-- **Jupyter Notebook:**
-- **Pandas:**
-- **Matplotlib:**
-- **Seaborn:**
+- **Jupyter Notebook:** Using Jupyter Notebook in VS Code along with Pandas, seaborn, and Matplotlib to analyze and visualize query result data in Python.
+- **Pandas:** To load and manipulate data, and then integrate with Matplotlib and seaborn for data visualization.
+- **Matplotlib:** To plot bar chart.
+- **seaborn:** To plot scatter plot and boxplot.
 - **Visual Studio Code:** My go-to for database management and executing SQL queries.
 
 # The Analysis
 
 ## Highlights
 
-Before diving into step by step analysis, here are data graphs with insight to quickly know better of data analyst job market.
+Before diving into step by step analysis, here are data graphs with insights for you to quickly capture the highlights of this project.
 
 **1. Salary Stat Overview**
 
-> Annual salary stat of all Data Analyst Jobs:\
-> <sub>
-> Q1 Salary: **75,000**\
-> Median Salary: **92,500**\
-> Q3 Salary: **111,478**\
-> Mean Salary: **96,707**\
-> Max Salary: **400,000**\
-> Min Salary: **30,000**</sub>
+- Annual salary stats of all Data Analyst Jobs:
+
+  | Stats              | Annual Salary (USD) |
+  | ------------------ | ------------------- |
+  | Q1 25th percentile | 75,000              |
+  | Median             | 92,500              |
+  | Q3 75th percentile | 111,478             |
+  | Mean               | 96,707              |
+  | Max                | 400,000             |
+  | Min                | 30,000              |
 
 - Data Analyst roles typically provide competitive salaries that can support a comfortable standard of living in the US. Besides, the 75% of jobs offer annual salary above $75,000 which is beyond U.S. median annual income $59,540 in 2023 Q4.
 
 ![7_salary_stat_all](datagraph/7_salary_stat_all.png)
 
-**2. Salary Stat of Top 5 demanded skills**
+**2. Salary Stats of Top 5 Demanded Skills**
 
 - The median salary (represented by the horizontal line inside each box) varies across top demanded skills, and Python appears to have the highest median salary, followed by Tableau and R.
 - As a junior data analyst job seeker, being proficient in Python and Tableau could enhance your job prospects and potentially lead to better salary opportunities.
 
 ![7_top_demanded_skill_salary](datagraph/7_top_demanded_skill_salary.png)
 
-**3. Salary Stat of Top 5 paying skills**
+**3. Salary Stats of Top 5 Paying Skills**
 
 - Big data, distributed data management and machine learning are skills to drive high-paying jobs.
 - Kafka and PyTorch have higher Q3 and mean salary among top 5 paying skills despite their median value not being the highest. Job seekers with proficiency in these skills may have access to a subset of high-paying jobs that offer competitive salaries above the median and mean of the entire job listings.
 
 ![7_top_paying_skill_salary](datagraph/7_top_paying_skill_salary.png)
 
-## Detailed Analysis Step By Step
+**4. Optimal Skills Analysis**
+
+From previous highlights, we analyzed top 5 demanded and top 5 paying skills and their salary stats. Now, we look into optimal skills (top 25 paying skills that have over 10 job listings) while applying the concept of [BCG Matrix](https://www.bcg.com/about/overview/our-history/growth-share-matrix) to analyze skillset portfolio and make our own skillset strategy.
+
+Among top 25 paying skills that have over 10 job listings:
+
+> **High Demand, High Salary (Star):**\
+> Airflow, Scala, Linux, Confluence, PySpark\
+> **High Demand, Low Salary (Cash cow):**\
+> Snowflake, Spark, Hadoop, Databricks, pandas, GCP, Git\
+> **Low Demand, Low Salary (Pet):**\
+> MongoDB, Splunk, Shell, Unix, phoenix, PHP\
+> **Low Demand, High Salary (Question mark):**\
+> Kafka, PyTorch, Perl, TensorFlow, Cassandra, Atlassian
+
+- Despite skills like kafka, pytorch, perl, tensorflow and cassandra tend to have top paying, their demand on market is not as many as skills in Star and Cash cow quadrants.
+
+- Rather than finding either top demanded skills or top paying skills, we could develop our skillset strategy to pave the career in data analysis field.
+
+- As a junior Data Analyst, I could easily prioritize which optimal skills to learn or enhance based on not only my interest but also the degree of financial stability and prospect. First, I would enhance my skills on Hadoop, pandas to get financial stability. And then, I would learn more about Spark, PySpark and Snowflake, GCP and Airflow to extend my skills for obtain higher salary.
+
+![5_optimal_skills](datagraph/5_optimal_skills.png)
+
+**5. Skills Required for Top 10 Paying Jobs**
+
+- Among top 10 paying jobs, Python is still the most common skill and followed by Tableau, Excel, R and SQL.
+
+- A combination of languages (Python, SQL, R), data visualization tools (Tableau, Power BI, Looker), big data tools (BigQuery, Kafka, Snowflake), and version control systems (Git, GitHub) are highly valued in data analyst roles.
+
+![2_top_paying_job_skills](datagraph/2_top_paying_job_skills.png)
+
+## Analysis Step By Step
 
 ### 1. Top Paying Data Analyst Jobs
 
@@ -134,7 +169,7 @@ ORDER BY salary_year_avg DESC;
 
 - **Must-have skills:** Python, Tableau, Excel, R and SQL are the most common skills mentioned, indicating their significance in the field of data analysis.
 - **Cloud Computing and Big Data:** Knowledge of cloud-based data warehouse solutions like BigQuery and Snowflake, along with tools for data streaming and workflow management like Kafka, Spark, and Airflow, underscores the shift towards cloud-based analytics and real-time data processing in modern data analysis roles.
-- These insights suggest that a combination of languages (SQL, Python, R), data visualization tools (Tableau, Looker), big data tools (BigQuery, Kafka, Snowflake), and version control systems (Git, GitHub) are highly valued in data analyst roles.
+- These insights suggest that a combination of languages (SQL, Python, R), data visualization tools (Tableau, Power BI, Looker), big data tools (BigQuery, Kafka, Snowflake), and version control systems (Git, GitHub) are highly valued in data analyst roles.
 
 ### 3. Top Demanded Skills For Data Analyst Jobs
 
@@ -280,6 +315,80 @@ LIMIT 25;
 
 Overall, the trends suggest a strong emphasis on advanced analytics, big data technologies, cloud computing, and automation in data analyst roles, reflecting the evolving needs of organizations to derive insights and make data-driven decisions efficiently.
 
+### 6. Top Demanded or Top Paying Skills For Data Analyst Jobs
+
+```sql
+WITH top_skills_table AS(
+    SELECT
+        sub_query.*,
+        ROW_NUMBER() OVER(ORDER BY demand_count DESC) AS index_dcount,
+        NTILE(100) OVER(ORDER BY demand_count DESC) AS percentile_by_demand_count,
+        ROW_NUMBER() OVER(ORDER BY avg_salary DESC) AS index_asalary,
+        NTILE(100) OVER(ORDER BY avg_salary DESC) AS percentile_by_avg_salary
+    FROM (
+        SELECT
+            skills_dim.skills AS skill,
+            COUNT(job_postings_fact.job_id) AS demand_count,
+            ROUND(AVG(salary_year_avg), 0) AS avg_salary,
+            ROUND(MIN(salary_year_avg), 0) AS min_salary,
+            ROUND(MAX(salary_year_avg), 0) AS max_salary,
+            PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY salary_year_avg) AS median_salary
+        FROM job_postings_fact
+        INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+        INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+        WHERE
+            salary_year_avg IS NOT NULL AND
+            job_title_short = 'Data Analyst'
+        GROUP BY
+            skill
+        HAVING
+            COUNT(job_postings_fact.job_id) > 10
+    ) AS sub_query
+)
+
+SELECT *
+FROM top_skills_table
+WHERE percentile_by_demand_count <=10 OR percentile_by_avg_salary <=10
+ORDER BY demand_count DESC;
+```
+
+|     | skill      | demand_count | avg_salary | min_salary | max_salary | median_salary | index_dcount | percentile_by_demand_count | index_asalary | percentile_by_avg_salary |
+| --: | :--------- | -----------: | ---------: | ---------: | ---------: | ------------: | -----------: | -------------------------: | ------------: | -----------------------: |
+|   0 | sql        |         3083 |      96435 |      30000 |     375000 |         92500 |            1 |                          1 |            69 |                       67 |
+|   1 | excel      |         2143 |      86419 |      30000 |     375000 |         84500 |            2 |                          1 |            87 |                       85 |
+|   2 | python     |         1840 |     101512 |      35000 |     375000 |         98500 |            3 |                          2 |            48 |                       46 |
+|   3 | tableau    |         1659 |      97978 |      30000 |     375000 |         95000 |            4 |                          2 |            64 |                       62 |
+|   4 | r          |         1073 |      98708 |      35000 |     375000 |       92527.5 |            5 |                          3 |            62 |                       60 |
+|   5 | power bi   |         1044 |      92324 |      30000 |     375000 |         90000 |            6 |                          4 |            76 |                       74 |
+|   6 | sas        |         1000 |      93707 |      41447 |     375000 |         90000 |            7 |                          5 |            74 |                       72 |
+|   7 | word       |          527 |      82941 |      30000 |     375000 |         80850 |            8 |                          6 |            97 |                       95 |
+|   8 | powerpoint |          524 |      88316 |      30000 |     255830 |         85000 |            9 |                          7 |            83 |                       81 |
+|   9 | sql server |          336 |      96191 |      44100 |     185000 |         92500 |           10 |                          8 |            70 |                       68 |
+|  10 | oracle     |          332 |     100964 |      40000 |     400000 |       95588.2 |           11 |                          9 |            53 |                       51 |
+|  11 | azure      |          319 |     105400 |      32400 |     255830 |        100000 |           12 |                         10 |            38 |                       36 |
+|  12 | airflow    |           71 |     116387 |      51014 |     375000 |        111175 |           49 |                         47 |             7 |                        5 |
+|  13 | confluence |           62 |     114153 |      57500 |     189309 |        111175 |           54 |                         52 |            10 |                        8 |
+|  14 | scala      |           59 |     115480 |      50000 |     234000 |        111175 |           56 |                         54 |             8 |                        6 |
+|  15 | linux      |           58 |     114883 |      50000 |     400000 |        112150 |           58 |                         56 |             9 |                        7 |
+|  16 | mongodb    |           52 |     113608 |      48000 |     204585 |        111838 |           61 |                         59 |            12 |                       10 |
+|  17 | pyspark    |           49 |     114058 |      53014 |     255830 |        111175 |           62 |                         60 |            11 |                        9 |
+|  18 | kafka      |           40 |     129999 |      51014 |     400000 |        115095 |           66 |                         64 |             1 |                        1 |
+|  19 | tensorflow |           24 |     120647 |      77500 |     198000 |        105000 |           82 |                         80 |             4 |                        2 |
+|  20 | pytorch    |           20 |     125226 |      70000 |     220000 |        107000 |           86 |                         84 |             2 |                        1 |
+|  21 | perl       |           20 |     124686 |      56700 |     186500 |        119550 |           87 |                         85 |             3 |                        2 |
+|  22 | atlassian  |           15 |     117966 |      65000 |     190000 |        102500 |           94 |                         92 |             6 |                        4 |
+|  23 | cassandra  |           11 |     118407 |      53014 |     204585 |        111175 |          102 |                        100 |             5 |                        3 |
+
 # What I Learned
 
+Throughout this journey, I have turbocharged my SQL and Python skills.
+
+- **🧮Complex Query:** Leveraged advanced SQL query by merging tables, using CTE, subquery and aggregate functions like a pro to get meaningful data.
+
+- **📊Data Storytelling:** Mastered the art of data visualization, combining statistics and referencing BCG Growth Share Matrix to deliver insightful data graphs.
+
+- **🪄Analytical Wizardry:** Leveled up my problem-solving skills by turing questions into actionable insights.
+
 # Conclusions
+
+This project enhanced my SQL, Python skills and provided valuable insights into the data analysts job market. The [highlights](#Highlights) part serve as a guide to prioritizing skills to learn and making your own skillset portfolio strategy. This data exploration project indicates that continous learning and adaption to emerging trends is the key to pave better career in data analysis field.

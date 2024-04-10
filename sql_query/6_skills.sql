@@ -36,7 +36,7 @@ WITH top_skills_table AS(
 SELECT *
 FROM top_skills_table
 WHERE percentile_by_demand_count <=10 OR percentile_by_avg_salary <=10
-ORDER BY avg_salary DESC;
+ORDER BY demand_count DESC;
 
 /*
 
