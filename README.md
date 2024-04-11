@@ -67,7 +67,7 @@ Before diving into step-by-step analysis, here are data graphs with insights for
 
 **3. Salary Stats of Top 5 Paying Skills**
 
-- Skills relevant to big data, distributed data management and machine learning obtain high-paying jobs.
+- Skills relevant to big data, distributed data management and machine learning are required for high-paying jobs.
 - Kafka and PyTorch have higher Q3 and mean salary among top 5 paying skills despite their median value not being the highest. Job seekers with proficiency in these skills may have access to a subset of high-paying jobs that offer competitive salaries above the median and mean of the entire job listings.
 
 ![7_top_paying_skill_salary](datagraph/7_top_paying_skill_salary.png)
