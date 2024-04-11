@@ -21,7 +21,7 @@ Data hails from Luke Barousse's [SQL Course](https://lukebarousse.com/sql). It's
 3. What skills are most in demand for data analysts?
 4. Which skills are associated with higher salaries?
 5. What are the most optimal skills to learn?
-6. What skills are either top demanded or top paying that required for Data Analyst Jobs?
+6. What are the salary stats for top demanded or top paying skills required for Data Analyst Jobs?
 
 # Tools I Used
 
@@ -39,9 +39,9 @@ To delve into the data analyst job market, I leveraged the power of several key 
 
 ## Highlights
 
-Before diving into step by step analysis, here are data graphs with insights for you to quickly capture the highlights of this project.
+Before diving into step-by-step analysis, here are data graphs with insights for you to quickly capture the highlights of this project.
 
-**1. Salary Stat Overview**
+**1. Salary Stats Overview**
 
 - Annual salary stats of all Data Analyst Jobs:
 
@@ -67,14 +67,14 @@ Before diving into step by step analysis, here are data graphs with insights for
 
 **3. Salary Stats of Top 5 Paying Skills**
 
-- Big data, distributed data management and machine learning are skills to drive high-paying jobs.
+- Skills relevant to big data, distributed data management and machine learning obtain high-paying jobs.
 - Kafka and PyTorch have higher Q3 and mean salary among top 5 paying skills despite their median value not being the highest. Job seekers with proficiency in these skills may have access to a subset of high-paying jobs that offer competitive salaries above the median and mean of the entire job listings.
 
 ![7_top_paying_skill_salary](datagraph/7_top_paying_skill_salary.png)
 
 **4. Optimal Skills Analysis**
 
-From previous highlights, we analyzed top 5 demanded and top 5 paying skills and their salary stats. Now, we look into optimal skills (top 25 paying skills that have over 10 job listings) while applying the concept of [BCG Matrix](https://www.bcg.com/about/overview/our-history/growth-share-matrix) to analyze skillset portfolio and make our own skillset strategy.
+From previous highlights, we analyzed top 5 demanded and top 5 paying skills and their salary stats. Now, we look into optimal skills (top 25 paying skills that have over 10 job listings) while applying the concept of [BCG Matrix](https://www.bcg.com/about/overview/our-history/growth-share-matrix) to analyze top skills and make strategy to develop our skillset.
 
 Among top 25 paying skills that have over 10 job listings:
 
@@ -87,17 +87,17 @@ Among top 25 paying skills that have over 10 job listings:
 > **Low Demand, High Salary (Question mark):**\
 > Kafka, PyTorch, Perl, TensorFlow, Cassandra, Atlassian
 
-- Despite skills like kafka, pytorch, perl, tensorflow and cassandra tend to have top paying, their demand on market is not as many as skills in Star and Cash cow quadrants.
+- Despite skills like Kafka, PyTorch, Perl, TensorFlow and Cassandra tend to be high-paying, their demands on market are not as many as skills in Star and Cash cow quadrants.
 
 - Rather than finding either top demanded skills or top paying skills, we could develop our skillset strategy to pave the career in data analysis field.
 
-- As a junior Data Analyst, I could easily prioritize which optimal skills to learn or enhance based on not only my interest but also the degree of financial stability and prospect. First, I would enhance my skills on Hadoop, pandas to get financial stability. And then, I would learn more about Spark, PySpark and Snowflake, GCP and Airflow to extend my skills for obtain higher salary.
+- As a junior Data Analyst, I want to prioritize which optimal skills to learn or enhance based on not only my interest but also the degree of financial stability and prospect. First, I would enhance my skills on Hadoop, pandas to get financial stability. And then, I would invest myself to extend skillset on Spark, PySpark, Snowflake and Airflow for obtaining higher paying and sought-after jobs.
 
 ![5_optimal_skills](datagraph/5_optimal_skills.png)
 
 **5. Skills Required for Top 10 Paying Jobs**
 
-- Among top 10 paying jobs, Python is still the most common skill and followed by Tableau, Excel, R and SQL.
+- Among top 10 paying jobs, Python is the most common skill and followed by Tableau, Excel, R and SQL.
 
 - A combination of languages (Python, SQL, R), data visualization tools (Tableau, Power BI, Looker), big data tools (BigQuery, Kafka, Snowflake), and version control systems (Git, GitHub) are highly valued in data analyst roles.
 
@@ -315,7 +315,7 @@ LIMIT 25;
 
 Overall, the trends suggest a strong emphasis on advanced analytics, big data technologies, cloud computing, and automation in data analyst roles, reflecting the evolving needs of organizations to derive insights and make data-driven decisions efficiently.
 
-### 6. Top Demanded or Top Paying Skills For Data Analyst Jobs
+### 6. Salary Stats of Top Demanded or Top Paying Skills For Data Analyst Jobs
 
 ```sql
 WITH top_skills_table AS(
